@@ -32,9 +32,9 @@ export class AuthenticationService {
       .post<any>(`${environment.apiUrl}/login`, { email, password }, httpOptions)
       .pipe(
         map(user => {
-          if (user && user.accesToken) {
+          if (user && user.accessToken) {
             // store user details in local storage to keep user logged in
-            localStorage.setItem('currentUser', user.accesToken);
+            localStorage.setItem('currentUser', user.accessToken);
             this.currentUserSubject.next(user);
           }
 
