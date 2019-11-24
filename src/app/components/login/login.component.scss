@@ -1,0 +1,24 @@
+// .example-card {
+//     max-width: 400px;
+//     vertical-align: middle;
+//     margin-top: 100px;
+//     .example-container {
+//         display: flex;
+//         flex-direction: column;
+//       }
+      
+//       .example-container > form > * {
+//         width: 100%;
+//       }
+// }
+
+.example-container {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+
+.example-container > * {
+  width: 100%;
+}
+  

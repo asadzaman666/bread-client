@@ -1,0 +1,18 @@
+<mat-card class="example-card">
+  <mat-card-header>
+
+    <mat-card-title>You're logged in with Angular 8 & JWT!!</mat-card-title>
+    <mat-card-subtitle>Users from secure api end point</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+
+    <mat-spinner *ngIf="loading"></mat-spinner>
+
+    <mat-list role="list" *ngIf="users">
+        <mat-list-item role="listitem">Item 1</mat-list-item>
+        <mat-list-item role="listitem">Item 2</mat-list-item>
+        <mat-list-item role="listitem">Item 3</mat-list-item>
+      </mat-list>
+      
+  </mat-card-content>
+</mat-card>

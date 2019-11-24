@@ -1,0 +1,11 @@
+.example-card {
+    margin-top: 25px;
+    min-width: 600px;
+    max-width: 1140px;
+    .expense-list {
+        width: 100%;
+            button {
+                margin-left: 10px;
+            }
+        }
+    }

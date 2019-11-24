@@ -1,0 +1,20 @@
+
+<h1 mat-dialog-title>Forge an expense</h1>
+<div mat-dialog-content>
+  
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date"  [(ngModel)]="data.date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Purpose" [(ngModel)]="data.purpose">
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput  placeholder="Amount" #message2 type="number" [(ngModel)]="data.amount">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onDecline()">Nevermind</button>
+  <button mat-button [mat-dialog-close]="data">Save</button>
+</div>

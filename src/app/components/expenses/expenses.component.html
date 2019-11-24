@@ -1,0 +1,44 @@
+
+
+<div fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="example-card">
+    <mat-card-header>
+
+      <mat-card-title>{{loggedInUser}}'s Expenses</mat-card-title>
+      <mat-card-subtitle>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" [formControl]="date1">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+
+      <div class="example-container">
+
+        <button mat-stroked-button color="primary" (click)="forgeExpense()">Forge</button>
+
+        <div fxLayout="row" fxLayoutAlign="start" class="lists">
+
+          <mat-list class="expense-list">
+              <mat-list-item *ngFor="let data of expenses">
+                <mat-icon mat-list-icon>note</mat-icon>
+                <h4 mat-line>{{data.purpose}}</h4>
+                <h5 mat-line>{{intoMoment(data.date)}}</h5>
+                <h5 mat-line> BDT {{data.amount}} </h5>
+
+                <div fxLayout="row" fxLayoutAlign="space-between center" class="list-btn">
+                  <button mat-button mat-stroked-button color="primary" (click)="updateExpense(data)">Edit</button>
+                  <button mat-button mat-stroked-button color="warn" (click)="deleteExpense(data)">Tear Apart</button>
+                </div>
+              </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
+
+    </mat-card-content>
+  </mat-card>
+</div>
