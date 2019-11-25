@@ -21,6 +21,8 @@ import { ExpenseUpdateDialogComponent } from './components/dialogs/expense-updat
 import { ExpenseRemoveDialogComponent } from './components/dialogs/expense-remove-dialog/expense-remove-dialog.component';
 import { RegisterComponent } from './components/register/register.component';
 import { LoginErrorDialogComponent } from './components/dialogs/login-error-dialog/login-error-dialog.component';
+import { LoaderComponent } from './components/loader/loader.component';
+import { LoaderService } from './services/loader.service';
 
 
 @NgModule({
@@ -35,6 +37,7 @@ import { LoginErrorDialogComponent } from './components/dialogs/login-error-dial
     ExpenseRemoveDialogComponent,
     RegisterComponent,
     LoginErrorDialogComponent,
+    LoaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,6 +49,7 @@ import { LoginErrorDialogComponent } from './components/dialogs/login-error-dial
     FlexLayoutModule
   ],
   providers: [
+    LoaderService,
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
         { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
 
