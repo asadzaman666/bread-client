@@ -93,10 +93,8 @@ export class ExpensesComponent implements OnInit {
           this._snackBar.open(data.message, 'Ok', {
             duration: 2000,
           });
+          this.ngOnInit();
         });
-
-        this.ngOnInit();
-
       }
     });
   }
